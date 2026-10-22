@@ -2,6 +2,7 @@ import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 import { PageEffects } from "./components/PageEffects";
 import { Hero } from "./components/sections/Hero";
+import { ConceptVisual } from "./components/sections/ConceptVisual";
 import { Thesis } from "./components/sections/Thesis";
 import { Dive } from "./components/sections/Dive";
 import { RealWorldReferences } from "./components/sections/RealWorldReferences";
@@ -30,6 +31,7 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
+        <ConceptVisual />
         <Thesis />
         <Dive />
         <RealWorldReferences />
