@@ -4,6 +4,7 @@ import { PageEffects } from "./components/PageEffects";
 import { Hero } from "./components/sections/Hero";
 import { Thesis } from "./components/sections/Thesis";
 import { Dive } from "./components/sections/Dive";
+import { RealWorldReferences } from "./components/sections/RealWorldReferences";
 import { Constraints } from "./components/sections/Constraints";
 import { Perception } from "./components/sections/Perception";
 import { SpatialMemory } from "./components/sections/SpatialMemory";
@@ -31,6 +32,7 @@ export default function App() {
         <Hero />
         <Thesis />
         <Dive />
+        <RealWorldReferences />
         <Constraints />
         <Perception />
         <SpatialMemory />
