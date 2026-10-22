@@ -3,6 +3,7 @@ import { cn } from "@/utils/cn";
 
 const LINKS = [
   { href: "#platform", label: "Platform" },
+  { href: "#visual-study", label: "O-01 concept" },
   { href: "#real-world", label: "Field notes" },
   { href: "#missions", label: "Missions" },
   { href: "#architecture", label: "Architecture" },
