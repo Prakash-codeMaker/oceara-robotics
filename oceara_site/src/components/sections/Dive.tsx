@@ -76,8 +76,11 @@ export function Dive() {
     return (
       <section className="bg-abyss-2 py-24">
         <div className="mx-auto max-w-[1480px] px-5 md:px-8">
-          <div className="label text-cyan">03 — The dive</div>
+          <div className="label text-cyan">03 / The underwater environment</div>
           <h2 className="headline mt-6 text-5xl md:text-7xl">Why depth is hard.</h2>
+          <p className="mt-5 max-w-2xl border-l border-amber/60 pl-4 text-sm leading-relaxed text-mist">
+            Environmental narrative only. These example depths describe changing underwater conditions, not O-01’s depth rating or tested operating range.
+          </p>
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {STAGES.map((s) => (
               <article key={s.depth} className="border border-white/10 p-6">
@@ -133,9 +136,12 @@ export function Dive() {
         <div className="relative z-10 mx-auto flex h-full max-w-[1480px] flex-col justify-between px-5 py-24 md:px-8">
           <div className="flex items-start justify-between">
             <div>
-              <div className="label text-cyan">03 — The dive</div>
+              <div className="label text-cyan">03 / The underwater environment</div>
               <div className="mt-3 font-mono text-[10px] tracking-[0.22em] text-mist uppercase">
-                Scroll to descend
+                Scroll to explore the environment
+              </div>
+              <div className="mt-3 max-w-[250px] font-mono text-[8px] leading-relaxed tracking-[0.1em] text-amber uppercase">
+                Illustrative depth context / not an O-01 performance chart
               </div>
             </div>
             <div className="text-right">
