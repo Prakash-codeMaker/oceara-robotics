@@ -147,12 +147,14 @@ export function MissionSimulator() {
           Give the robot a mission.
         </h2>
         <p className="mt-6 max-w-2xl text-mist">
-          Start with a job. The system should then plan, navigate, perceive,
-          remember, act, verify, and report.
+          Explore a notional mission sequence. This simulator illustrates one possible workflow; it does not control a robot or report actual O-01 performance.
         </p>
         <div className="mt-3 font-mono text-[10px] tracking-[0.18em] text-amber uppercase">
-          Simulation / concept
+          Simulation / concept only
         </div>
+        <p className="mt-3 max-w-3xl border-l border-amber/40 pl-4 text-xs leading-relaxed text-mist">
+          Illustrative route and notional scenario parameters only. The area and depth values below are examples, not O-01 specifications, validated operating limits, or evidence of a completed mission.
+        </p>
 
         <div className="mt-10 flex flex-wrap gap-2">
           {(Object.keys(MISSIONS) as Mission[]).map((m) => (
@@ -188,11 +190,11 @@ export function MissionSimulator() {
             <div className="label">Mission parameters</div>
             <dl className="mt-5 space-y-3 font-mono text-[11px] tracking-[0.12em] uppercase">
               <div className="flex justify-between gap-4">
-                <dt className="text-slate-sea">Area</dt>
+                <dt className="text-slate-sea">Example area</dt>
                 <dd>{meta.area}</dd>
               </div>
               <div className="flex justify-between gap-4">
-                <dt className="text-slate-sea">Depth</dt>
+                <dt className="text-slate-sea">Example depth</dt>
                 <dd>{meta.depth}</dd>
               </div>
               <div>
