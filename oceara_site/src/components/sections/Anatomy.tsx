@@ -59,8 +59,8 @@ export function Anatomy() {
               Exploded O-01.
             </h2>
             <p className="mt-5 max-w-md text-mist">
-              A first-version robot design. Concept / first prototype. Not yet
-              fabricated.
+              Proposed system layers for discussion. This is a concept model,
+              not final CAD, and the physical prototype has not yet been fabricated.
             </p>
             <ol className="mt-10 space-y-2">
               {LAYERS.map((l, i) => (
@@ -81,7 +81,7 @@ export function Anatomy() {
                 fallback={
                   <img
                     src="/images/o01-side.jpg"
-                    alt="O-01"
+                    alt="Illustrative O-01 concept model, not fabricated"
                     className="h-full w-full object-contain"
                   />
                 }
@@ -91,7 +91,7 @@ export function Anatomy() {
             ) : (
               <img
                 src="/images/o01-side.jpg"
-                alt="O-01 concept"
+                alt="Illustrative O-01 concept model, not fabricated"
                 className="h-full w-full object-contain"
               />
             )}
