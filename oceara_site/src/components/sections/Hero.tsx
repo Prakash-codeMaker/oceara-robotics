@@ -7,13 +7,14 @@ const HeroScene = lazy(() =>
   import("../robot/HeroScene").then((m) => ({ default: m.HeroScene })),
 );
 
+// This is a scroll-driven environmental narrative, not an O-01 depth rating.
 const DEPTHS = [
-  { m: 0, label: "0 m" },
-  { m: 10, label: "10 m" },
-  { m: 25, label: "25 m" },
-  { m: 50, label: "50 m" },
-  { m: 100, label: "100 m" },
-  { m: 200, label: "200 m+" },
+  { m: 0, label: "SURFACE" },
+  { m: 10, label: "LIGHT FALL-OFF" },
+  { m: 25, label: "GPS DENIED" },
+  { m: 50, label: "VISIBILITY LOSS" },
+  { m: 100, label: "ACOUSTIC CONSTRAINTS" },
+  { m: 200, label: "UNCERTAINTY" },
 ];
 
 export function Hero() {
@@ -104,7 +105,7 @@ export function Hero() {
               </div>
             </div>
             <div className="hidden text-right md:block">
-              <div className="label">Depth</div>
+              <div className="label">Environment chapter</div>
               <div className="font-display mt-1 text-3xl tracking-tight text-foam">
                 {depthLabel}
               </div>
@@ -121,9 +122,10 @@ export function Hero() {
                 the surface.
               </h1>
               <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-mist md:text-base">
-                We are building autonomous underwater systems for exploration,
-                research, inspection, environmental monitoring, and marine-debris
-                recovery.
+                Oceara is developing O-01, a proposed tethered underwater
+                robotics platform. The first target is a controlled-water proof
+                of operator control and live video. Waste recovery remains a
+                later direction, not a demonstrated capability.
               </p>
               <div className="pointer-events-auto mt-8 flex flex-wrap gap-3">
                 <a href="#platform" className="btn-primary rounded-full" data-magnetic>
@@ -154,11 +156,11 @@ export function Hero() {
                     <span className="status-dot" />
                   </div>
                   <dl className="space-y-2 font-mono text-[11px] tracking-[0.12em] text-mist uppercase">
-                    <Row k="Mission status" v="Ready" />
-                    <Row k="Navigation" v="Local" />
-                    <Row k="Perception" v="Multimodal" />
-                    <Row k="Mode" v="Autonomous" />
-                    <Row k="Link" v="Acoustic / Surface" />
+                    <Row k="System stage" v="Architecture drafted" />
+                    <Row k="Navigation" v="Requirements under review" />
+                    <Row k="Perception" v="Design target" />
+                    <Row k="First test" v="Operator control" />
+                    <Row k="Link" v="Tethered concept" />
                   </dl>
                   <div className="mt-4 border-t border-white/10 pt-3 font-mono text-[10px] tracking-[0.14em] text-slate-sea uppercase">
                     {mobile
