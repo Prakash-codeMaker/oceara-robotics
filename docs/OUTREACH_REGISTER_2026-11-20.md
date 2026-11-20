@@ -5,7 +5,7 @@
 
 ## New first-contact messages sent in this sprint
 
-These messages were sent from the connected Gmail account on 20 November 2026. They requested technical feedback, customer discovery, supplier quotations, research guidance or possible future validation. They did not claim that O-01 is built or field-ready.
+Messages below were sent from the connected Gmail account on 20 November 2026. They requested technical feedback, customer discovery, supplier quotations, research guidance or possible future validation. They did not claim that O-01 is built or field-ready.
 
 ### Research and engineering
 - jnaik@outr.ac.in — underwater robotics guidance
@@ -18,6 +18,9 @@ These messages were sent from the connected Gmail account on 20 November 2026. T
 - sanil@nio.org — underwater sensing / research-facility referral
 - cro_tc@cwprs.gov.in — controlled hydraulic testing and technical referral
 - bdg.cmeri@csir.res.in — existing ROV technology licensing/adaptation enquiry
+- ssivasub@iitd.ac.in — sensing, instrumentation and robotics integration discussion
+- narsingjha@am.iitd.ac.in — submerged-object hydrodynamics and ROV stability discussion
+- head@wr.iitr.ac.in — hydropower inspection problem-validation referral
 
 ### Supplier and industry
 - sales@vebixautomation.com — revised propulsion/tether/housing RFQ
@@ -25,6 +28,7 @@ These messages were sent from the connected Gmail account on 20 November 2026. T
 - contact@coratia.com — industry discussion on hydropower ROV inspection
 
 ### Hydropower operator discovery
+
 **NHPC**
 - hop-chamera1@nhpc.nic.in — Chamera-I
 - hop-chamera-II@nhpc.nic.in — Chamera-II
@@ -49,17 +53,29 @@ These messages were sent from the connected Gmail account on 20 November 2026. T
 - hop.plhps@neepco.co.in — Panyor Lower
 - hoppare@neepco.co.in — Pare
 - hop.kahps@neepco.co.in — Kameng
-- wah-umiamjj@neepco.co.in — Wah Umium
 - hop-tatohep@neepco.co.in — Tato
+- edp.hydro@neepco.co.in — central Project Hydro technical office
 
-## New-message count
+### Additional engineering / operator / public-sector contacts
+- secy@bbmb.nic.in — BBMB Secretariat; request for routing to hydro-mechanical / dam-safety engineering
+- info@sjvn.nic.in — SJVN; request for hydropower project maintenance referral
+- mukulgarg@thdc.co.in — THDC engineering discovery
+- sunil_jain@nic.in — CEA hydro-project monitoring technical guidance
+- mail@wapcos.co.in — WAPCOS hydropower engineering / inspection workflow discussion
+- Chief-GenerationOffice@tatapower.com — Tata Power Generation Office; message bounced because the Microsoft 365 group does not accept messages from this external sender
 
-- 10 research/technical institution, team and technology-transfer messages;
-- 2 component supplier enquiries;
-- 1 ROV inspection company discussion;
-- 23 hydropower station discovery messages.
+## Delivery and count discipline
 
-**Total: 36 new first-contact messages.** A separate correction reply was sent to Vebix to clarify a bracketed phone-number placeholder in the signature. This register records messages sent, not delivered, read or answered.
+- 36 initial first-contact attempts were recorded in the earlier outreach batch.
+- 10 additional first-contact attempts were made in this execution pass.
+- **Total: 46 first-contact attempts.**
+- Nine of the ten additional messages were accepted by Gmail for delivery with no bounce observed in the immediate audit.
+- Two confirmed delivery failures are known across the batch:
+  - wah-umiamjj@neepco.co.in — address not found.
+  - Chief-GenerationOffice@tatapower.com — external sender not permitted by the group.
+- A separate correction reply was sent to Vebix to clarify a bracketed phone-number placeholder in the signature.
+
+Counts refer to messages attempted, not delivered, read, answered, or agreed. Do not report an enquiry as a partnership or pilot without written confirmation. Official NHPC notices have also announced a transition to the @nhpc.in email domain; validate any stale @nhpc.nic.in contact before retrying a bounced message.
 
 ## Existing threads — do not duplicate
 
@@ -76,13 +92,14 @@ The mailbox already contained prior outreach to:
 
 | Counterparty | Known status | Next action |
 |---|---|---|
-| GSBTM TOCIC | Sent PRISM Phase I Category I application template after virtual meeting | Obtain and complete exact form; confirm all fields, category and deadline |
-| BVU/COEP institutional office | NOC request forwarded to Vice Principal | Request decision and project-completion commitment |
+| GSBTM TOCIC | PRISM Phase I Category I form supplied; soft copy requested within 10–15 days; no fixed deadline given | Use exact official form; prepare proposal and submit only with applicant-controlled documents and institutional NOC |
+| BVU/COEP institutional office | NOC request forwarded to Vice Principal | Request decision and clarify project-generated IP ownership |
 | SINE IIT Bombay PRAYAS PMU | Innovator/startup call expected in approx. 3–4 months | Monitor official next intake; prepare technical pack |
 | Venture Center | Current PRAYAS intake closed; referred to SINE | Continue engineering/prototyping discussion separately |
-| Imagine H2O | Current cohort too early for pre-prototype; advised next cycle after proof of concept | Reconnect after controlled validation |
+| Imagine H2O | Current response suggested the project should return in a future cycle after more proof of concept | Reconnect after controlled validation |
 | Startupbootcamp Georgia | Application receipt confirmed | Track formal review and programme requirements |
-| Start-Up Chile | Individual applicant eligible, but founder must relocate full-time for 4–6 months; co-financing accounting required | Decide personally whether relocation and co-financing are feasible before applying |
+| Start-Up Chile | Programme manager said an individual can apply, but the published legal wording appears to require a foreign legal entity; clarification requested | Do not submit until written interpretation resolves the inconsistency and relocation/co-financing feasibility is assessed |
+| Tata Power Generation Office | Email bounced because external senders are blocked by the group | Use the official website contact form or another published business route; do not retry the blocked address |
 
 ## Follow-up discipline
 
