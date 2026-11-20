@@ -1,0 +1,356 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://oceara-robotics.github.io/schemas/o01-inspection-run.schema.json",
+  "title": "O-01 Inspection Run",
+  "description": "Human-reviewed evidence record for an O-01 controlled inspection. Does not represent an automated structural diagnosis.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "project",
+    "run",
+    "vehicleConfiguration",
+    "panels",
+    "observations"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "projectId",
+        "structureType",
+        "inspectionScope"
+      ],
+      "properties": {
+        "projectId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "customerAlias": {
+          "type": "string"
+        },
+        "siteAlias": {
+          "type": "string"
+        },
+        "structureType": {
+          "type": "string",
+          "enum": [
+            "trash_rack",
+            "intake_structure",
+            "gate",
+            "tunnel",
+            "other"
+          ]
+        },
+        "inspectionScope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "panelLayoutReference": {
+          "type": "string"
+        }
+      }
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "runId",
+        "startedAt",
+        "timeZone",
+        "operator",
+        "environment"
+      ],
+      "properties": {
+        "runId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "startedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "endedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "timeZone": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "environment": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "waterType": {
+              "type": "string",
+              "enum": [
+                "fresh",
+                "brackish",
+                "salt",
+                "unknown"
+              ]
+            },
+            "visibilityNotes": {
+              "type": "string"
+            },
+            "flowNotes": {
+              "type": "string"
+            },
+            "temperatureC": {
+              "type": "number"
+            },
+            "siteAuthorizationReference": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "vehicleConfiguration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "vehicleId",
+        "configurationRevision",
+        "controlMode"
+      ],
+      "properties": {
+        "vehicleId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "configurationRevision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "controlMode": {
+          "type": "string",
+          "enum": [
+            "manual",
+            "assisted",
+            "test_simulation"
+          ]
+        },
+        "payloads": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "calibrationRecords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "panels": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "panelId",
+          "coverageStatus"
+        ],
+        "properties": {
+          "panelId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "drawingReference": {
+            "type": "string"
+          },
+          "row": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "column": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "coverageStatus": {
+            "type": "string",
+            "enum": [
+              "not_inspected",
+              "partial",
+              "reviewed",
+              "inaccessible"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "observationId",
+          "panelId",
+          "capturedAt",
+          "videoTimecodeSeconds",
+          "tag",
+          "reviewStatus"
+        ],
+        "properties": {
+          "observationId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "panelId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "capturedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "videoTimecodeSeconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "mediaReference": {
+            "type": "string"
+          },
+          "stillImageReference": {
+            "type": "string"
+          },
+          "depthM": {
+            "type": "number"
+          },
+          "attitudeDeg": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "pitch": {
+                "type": "number"
+              },
+              "roll": {
+                "type": "number"
+              },
+              "heading": {
+                "type": "number"
+              }
+            }
+          },
+          "estimatedPosition": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "frame": {
+                "type": "string",
+                "description": "Named local frame; do not imply global georeferencing."
+              },
+              "xM": {
+                "type": "number"
+              },
+              "yM": {
+                "type": "number"
+              },
+              "zM": {
+                "type": "number"
+              },
+              "quality": {
+                "type": "string",
+                "enum": [
+                  "unverified",
+                  "low",
+                  "medium",
+                  "high"
+                ]
+              }
+            }
+          },
+          "tag": {
+            "type": "string",
+            "enum": [
+              "debris",
+              "apparent_deformation",
+              "missing_member",
+              "corrosion_like_appearance",
+              "obstruction",
+              "unknown",
+              "other"
+            ]
+          },
+          "operatorNote": {
+            "type": "string"
+          },
+          "reviewStatus": {
+            "type": "string",
+            "enum": [
+              "unreviewed",
+              "reviewed",
+              "requires_follow_up",
+              "rejected"
+            ]
+          },
+          "reviewerNote": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "dataQuality": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "videoComplete": {
+          "type": "boolean"
+        },
+        "depthAvailable": {
+          "type": "boolean"
+        },
+        "orientationAvailable": {
+          "type": "boolean"
+        },
+        "clockSynchronizationStatus": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "approximate",
+            "not_verified"
+          ]
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

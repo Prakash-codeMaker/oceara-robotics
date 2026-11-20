@@ -1,0 +1,100 @@
+{
+  "schemaVersion": "0.1.0",
+  "project": {
+    "projectId": "OCEARA-MOCK-RACK-001",
+    "customerAlias": "INTERNAL_TEST",
+    "siteAlias": "CONTROLLED_TEST_TANK",
+    "structureType": "trash_rack",
+    "inspectionScope": "Simulated mock-rack panel inspection using recorded sample footage and manually entered observations.",
+    "panelLayoutReference": "mock-rack-layout-revA"
+  },
+  "run": {
+    "runId": "RUN-2026-11-20-001",
+    "startedAt": "2026-11-20T10:00:00+05:30",
+    "endedAt": "2026-11-20T10:12:00+05:30",
+    "timeZone": "Asia/Kolkata",
+    "operator": "TEST_OPERATOR",
+    "reviewer": null,
+    "environment": {
+      "waterType": "fresh",
+      "visibilityNotes": "Illustrative test data only; no physical trial occurred.",
+      "flowNotes": "No measured flow; simulated/manual dataset.",
+      "siteAuthorizationReference": "NOT_APPLICABLE_SIMULATED"
+    }
+  },
+  "vehicleConfiguration": {
+    "vehicleId": "O-01-CONCEPT",
+    "configurationRevision": "REV-A-DRAFT",
+    "controlMode": "test_simulation",
+    "payloads": [
+      "sample_video",
+      "manual_metadata"
+    ],
+    "calibrationRecords": []
+  },
+  "panels": [
+    {
+      "panelId": "RACK-A-PANEL-001",
+      "drawingReference": "mock-rack-layout-revA",
+      "row": 0,
+      "column": 0,
+      "coverageStatus": "reviewed",
+      "notes": "Illustrative panel record."
+    },
+    {
+      "panelId": "RACK-A-PANEL-002",
+      "drawingReference": "mock-rack-layout-revA",
+      "row": 0,
+      "column": 1,
+      "coverageStatus": "partial",
+      "notes": "Illustrative partial-coverage record."
+    },
+    {
+      "panelId": "RACK-A-PANEL-003",
+      "drawingReference": "mock-rack-layout-revA",
+      "row": 0,
+      "column": 2,
+      "coverageStatus": "not_inspected",
+      "notes": "Not visited in this simulated run."
+    }
+  ],
+  "observations": [
+    {
+      "observationId": "OBS-0001",
+      "panelId": "RACK-A-PANEL-001",
+      "capturedAt": "2026-11-20T10:04:12+05:30",
+      "videoTimecodeSeconds": 252,
+      "mediaReference": "sample://mock-rack-run-001.mp4",
+      "depthM": 3.2,
+      "attitudeDeg": {
+        "pitch": 1.1,
+        "roll": -0.4,
+        "heading": 92
+      },
+      "estimatedPosition": {
+        "frame": "mock-rack-local-frame",
+        "xM": 0,
+        "yM": 0,
+        "zM": -3.2,
+        "quality": "unverified"
+      },
+      "tag": "debris",
+      "operatorNote": "Illustrative annotation only; not an actual observed defect or site condition.",
+      "reviewStatus": "unreviewed"
+    }
+  ],
+  "dataQuality": {
+    "videoComplete": false,
+    "depthAvailable": false,
+    "orientationAvailable": false,
+    "clockSynchronizationStatus": "not_verified",
+    "exceptions": [
+      "Demonstration fixture only. No robot, camera telemetry, depth sensor or physical tank test was used."
+    ]
+  },
+  "limitations": [
+    "All values are synthetic examples for schema testing.",
+    "No physical prototype or underwater inspection was performed.",
+    "Tags are operator annotations and are not engineering diagnoses."
+  ]
+}
